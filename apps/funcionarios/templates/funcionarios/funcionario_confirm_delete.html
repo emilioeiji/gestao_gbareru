@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form }}
+
+        Deseja Confirmar a exclusão do funcionário <br><br><span class="alert alert-primary" role="alert">{{ funcionario.nome }}</span>
+        <button type="submit" class="btn btn-danger">Confirmar</button>
+    </form>
+
+{% endblock %}
