@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'apps.setor',
     'apps.skill',
     'apps.unidade',
+    'apps.posto',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form }}
+
+        Deseja Confirmar a exclusão do posto <br><br><span class="alert alert-primary" role="alert">{{ posto.posto }}</span>
+        <button type="submit" class="btn btn-danger">Confirmar</button>
+        <a href="{% url 'list_posto' %}" class="btn btn-warning">Cancelar</a>
+    </form>
+
+{% endblock %}

@@ -9,6 +9,7 @@
 
         Deseja Confirmar a exclusão do funcionário <br><br><span class="alert alert-primary" role="alert">{{ funcionario.nome }}</span>
         <button type="submit" class="btn btn-danger">Confirmar</button>
+        <a href="{% url 'list_funcionarios' %}" class="btn btn-warning">Cancelar</a>
     </form>
 
 {% endblock %}

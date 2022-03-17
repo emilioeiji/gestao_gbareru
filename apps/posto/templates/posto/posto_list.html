@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Posto</th>
+            <th scope="col">Editar</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for posto in object_list %}
+        <tr>
+            <td>
+                {{ posto.posto }}
+            </td>
+            <td>
+                <a href="{% url 'update_posto' posto.id %}" class="btn btn-primary">Editar</a>
+                <a href="{% url 'delete_posto' posto.id %}" class="btn btn-danger">Excluir</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="{% url 'create_posto' %}" class="btn btn-primary">Novo Posto</a>
+
+{% endblock %}
